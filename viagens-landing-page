@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripMe: Sua Viagem Começa Aqui</title>
+    
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Header e Navegação */
+        header {
+            background-color: #004d40; /* Verde Escuro */
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky; /* Fica fixo no topo ao rolar */
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            /* 3.2: Configuração da transição */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* 3.1: Mudança de Aparência no Hover (Nav) */
+        nav ul li a:hover {
+            background-color: #00796b; /* Verde Mais Claro */
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        /* Banner */
+        .banner {
+            /* 1.3: Imagem como background com o link direto da imagem de Hallstatt */
+            background-image: url('https://worldby2.com.br/wp-content/uploads/2025/01/hallstatt.jpg'); 
+            background-size: cover;
+            background-position: center;
+            height: 60vh; /* Altura do Banner */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            width: 100%;
+        }
+
+        .banner-overlay {
+            /* Fundo semi-transparente para melhor leitura do texto */
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .banner h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .banner p {
+            font-size: 1.2em;
+            margin-bottom: 25px;
+        }
+
+        /* Botão CTA (Call to Action) */
+        .cta-button {
+            display: inline-block;
+            background-color: #ff9800; /* Laranja */
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            /* 3.2: Configuração da transição */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* 3.1: Mudança de Aparência no Hover do Botão */
+        .cta-button:hover {
+            background-color: #f57c00; /* Laranja Mais Escuro */
+            transform: scale(1.05); /* Pequeno zoom no botão */
+        }
+
+        /* Seções de Conteúdo */
+        .content-section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .content-section h2 {
+            color: #004d40;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .content-section article {
+            margin-bottom: 20px;
+            text-align: left;
+            padding: 15px;
+            border-left: 5px solid #00796b;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .secondary-color {
+            background-color: #e0f2f1; /* Fundo mais claro para contraste */
+        }
+
+        /* Navegação "Voltar ao Topo" */
+        .back-to-top {
+            margin-top: 40px;
+        }
+
+        .back-to-top a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+            /* 3.2: Configuração da transição */
+            transition: color 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* 3.1: Mudança de Aparência no Hover do Link */
+        .back-to-top a:hover {
+            color: #004d40;
+            opacity: 0.8;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer aside {
+            margin-top: 10px;
+            color: #ccc;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ccc;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+    </style>
+    </head>
+<body>
+    <header>
+        <div class="logo">TripMe</div>
+        <nav>
+            <ul>
+                <li><a href="#minhaviagem">Minha Viagem</a></li>
+                <li><a href="#nosencontre">Nos Encontre</a></li>
+                <li><a href="#conselhos">Conselhos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="banner" id="home">
+            <div class="banner-overlay">
+                <h1>Descubra a Magia dos Vilarejos Europeus</h1>
+                <p>O seu próximo destino remoto e inesquecível está à sua espera.</p>
+                <a href="#minhaviagem" class="cta-button">Planeje Sua Viagem Agora</a>
+            </div>
+        </section>
+
+        <section id="minhaviagem" class="content-section">
+            <h2>🌍 Planeje sua jornada dos sonhos</h2>
+            <article>
+                <h3>Roteiros Personalizados</h3>
+                <p>Crie sua viagem ideal com a nossa ajuda. De passeios culturais a trilhas remotas, nós cuidamos de todos os detalhes para que você apenas se preocupe em aproveitar.</p>
+            </article>
+            <article>
+                <h3>Passagens e Hospedagem</h3>
+                <p>Encontre os melhores preços em passagens aéreas e hotéis charmosos. Nossos pacotes exclusivos garantem conforto e economia.</p>
+            </article>
+            <div class="back-to-top">
+                <a href="#home">Voltar ao Topo</a>
+            </div>
+        </section>
+        
+        <hr>
+
+        <section id="nosencontre" class="content-section secondary-color">
+            <h2>🤝 Conecte-se com a TripMe</h2>
+            <p>Estamos prontos para transformar sua ideia de viagem em realidade. Fale conosco através dos canais abaixo ou visite um de nossos escritórios virtuais.</p>
+            <address>
+                <p>Email: contato@tripme.com</p>
+                <p>Telefone: +55 11 99999-9999</p>
+            </address>
+            <div class="back-to-top">
+                <a href="#home">Voltar ao Topo</a>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="conselhos" class="content-section">
+            <h2>💡 Dicas de Viagem Essenciais</h2>
+            <article>
+                <h3>Documentação</h3>
+                <p>Verifique sempre a validade do seu passaporte e a necessidade de vistos para o seu destino. **A prevenção é a chave!**</p>
+            </article>
+            <article>
+                <h3>Seguro Viagem</h3>
+                <p>Nunca viaje sem seguro. Em caso de imprevistos, ter cobertura médica e de bagagem pode salvar sua viagem.</p>
+            </article>
+            <div class="back-to-top">
+                <a href="#home">Voltar ao Topo</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TripMe. Todos os direitos reservados. | Design de Landing Page Simples.</p>
+        <aside>
+            <p>Política de Privacidade | Termos de Serviço</p>
+        </aside>
+    </footer>
+
+</body>
+</html>
